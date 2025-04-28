@@ -1,74 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор стоимости</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        input[type="number"] {
-            padding: 10px;
-            width: 80%;
-            margin: 10px 0;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        #result {
-            margin-top: 20px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор ремонта</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Калькулятор</h1>
-        <label for="squareMeters">Введите площадь (м²):</label>
-        <input type="number" id="squareMeters" placeholder="Например, 50">
-        <button id="calculateBtn">Рассчитать</button>
-        <div id="result"></div>
-    </div>
-
-    <script>
-        document.getElementById('calculateBtn').onclick = function() {
-            const meters = document.getElementById('squareMeters').value;
-            const price = 150; // стоимость за 1 м²
-            if (meters > 0) {
-                const result = meters * price;
-                document.getElementById('result').innerText = "Стоимость: " + result + " ₽";
-            } else {
-                document.getElementById('result').innerText = "Введите правильное значение!";
-            }
-        };
-    </script>
+ 
+<header>
+    <nav>
+        <div class="logo">Калькулятор ремонта</div>
+        <div class="menu">
+            <a href="#">О нас</a>
+        </div>
+    </nav>
+</header>
+ 
+<section class="hero">
+    <img src="background.png" alt="Обложка" class="background">
+    <div class="hero-content">
+        <h1>Быстрая смета ремонта<br>за 5 минут</h1>
+        <a href="#" class="btn">Рассчитать стоимость</a>
+ 
+        <div class="popular">
+            <h2>Популярные расчёты</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="paint-roller-icon.png" alt="Косметический ремонт">
+                    <p>Косметический ремонт</p>
+                </div>
+                <div class="card">
+                    <img src="floor-icon.png" alt="Укладка ламината">
+                    <p>Укладка ламината</p>
+                </div>
+                <div class="card">
+                    <img src="bathroom-icon.png" alt="Ремонт ванной">
+                    <p>Ремонт ванной</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="review">
+            <p>"Отличный сервис! За несколько шагов удалось составить детальную смету, рекомендую"</p>
+            <p><strong>Иван П.</strong></p>
+        </div>
+    </div>
+</section>
+ 
 </body>
 </html>
